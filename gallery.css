@@ -1,0 +1,199 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+    background-image: url('./Images/sky.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+nav {
+    background: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle label {
+    margin-left: 0.5rem;
+}
+
+header {
+    background: rgba(244, 244, 244, 0.8);
+    padding: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #121212;
+}
+
+/* Gallery Section */
+section.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: #121212;
+}
+
+.photo {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.photo:hover img {
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+
+.photo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.photo:hover::before {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    background: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer .social-links a {
+    color: #fff;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+footer .social-links a:hover {
+    color: #ddd;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode nav, .dark-mode footer {
+    background: #1e1e1e;
+}
+
+.dark-mode header {
+    background: rgba(244, 244, 244, 0.1);
+}
+
+.dark-mode section.gallery {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .photo img {
+    border: 1px solid #333;
+}
+section.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 2rem;
+    justify-content: center;
+    background-color: #121212;
+}
+
+.photo {
+    flex: 1 1 calc(25% - 2rem); 
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: opacity 0.3s, transform 0.3s; 
+}
+
+.photo:hover img {
+    opacity: 0.8;
+    transform: scale(1.05); 
+}
+
+.photo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.photo:hover::before {
+    opacity: 1; 
+}
+     
+/* Full-width photo styling */
+.full-width {
+    flex: 1 1 ; /* Full width */
+    margin: 0 0; /* Add some space around */
+}
+
+.full-width img {
+    width: 85vh;
+    height: 52vh; /* Maintain aspect ratio */
+}

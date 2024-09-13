@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey Through Lens - Gallery</title>
+    <link rel="stylesheet" href="./gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./login.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="theme-toggle">
+            <input type="checkbox" id="toggle-dark-mode">
+            <label for="toggle-dark-mode">Dark Mode</label>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Photo Gallery</h1>
+    </header>
+
+    <section class="gallery">
+        <!-- Each div class="photo" represents one image -->
+        <div class="photo">
+            <img src="./Images/flower.jpg" alt="Photo 1">
+        </div>
+        <div class="photo">
+            <img src="./Images/Rath.jpg" alt="Photo 2">
+        </div>
+        <div class="photo">
+            <img src="./Images/rakhi.jpg" alt="Photo 3">
+        </div>
+        <div class="photo">
+            <img src="./Images/IMG_6376.jpg" alt="Photo 4">
+        </div>
+        <div class="photo">
+            <img src="./Images/IMG_6556.jpg" alt="Photo 5">
+        </div>
+        <div class="photo">
+            <img src="./Images/IMG_6602.jpg" alt="Photo 6">
+        </div>
+        <div class="photo">
+            <img src="./Images/IMG_0088.jpg" alt="Photo 7">
+        </div>
+        <div class="photo">
+            <img src="./Images/IMG_8275 Copy.JPG" alt="Photo 8">
+        </div>
+        <div class="photo">
+            <img src="./Images/IMG_9526.jpg" alt="Photo 9">
+        </div>
+        <div class="photo">
+            <img src="./Images/IMG_3346.jpg" alt="Photo 10">
+        </div>
+        <div class="photo">
+            <img src="./Images/IMG_9531.jpg" alt="Photo 11">
+        </div>
+        <div class="photo">
+            <img src="./Images/IMG_0004.jpg" alt="Photo 12">
+        </div>
+        <div class="photo">
+            <img src="./Images/IMG_3342.jpg" alt="Photo 13">
+        </div>
+        <div class="photo">
+            <img src="./Images/IMG_3345.jpg" alt="Photo 14">
+        </div>
+        <div class="photo">
+            <img src="./Images/IMG_5497.jpg" alt="Photo 15">
+        </div>
+        <div class="photo">
+            <img src="./Images/IMG_3340.jpg" alt="Photo 16">
+        </div>
+        
+        <!-- <div class="photo">
+            <img src="./Images/IMG_5942.JPG" alt="Photo 16">
+        </div>
+        <div class="photo">
+            <img src="./Images/IMG_6526 Copy.JPG" alt="Photo 17"> -->
+        </div>
+    </section>
+    <section class="gallery">
+        <!-- Other gallery photos here -->
+        
+        <!-- Full-width photos -->
+        <div class="photo full-width">
+            <img src="./Images/IMG_5942.JPG" alt="Photo 16">
+        </div>
+        <div class="photo full-width">
+            <img src="./Images/IMG_6526 Copy.JPG" alt="Photo 17">
+        </div>
+        
+        <!-- More gallery photos -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Photography Showcase. All Rights Reserved.</p>   
+        <div class="social-links">
+            <a href="mailto:example@example.com"><i class="fa fa-envelope"></i></a>
+            <a href="https://www.instagram.com/journey._.throughlenses?igsh=ejlwejNuMzI3Yjg%3D&utm_source=qr" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-f"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        const toggleSwitch = document.getElementById('toggle-dark-mode');
+        const body = document.body;
+
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            body.classList.add(currentTheme);
+            if (currentTheme === 'dark-mode') {
+                toggleSwitch.checked = true;
+            }
+        }
+
+        toggleSwitch.addEventListener('change', () => {
+            if (toggleSwitch.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light-mode');
+            }
+        });
+    </script>
+</body>
+</html>

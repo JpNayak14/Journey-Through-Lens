@@ -1,0 +1,188 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+    background-image: url(./Images/sky.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333; /* Updated for readability */
+}
+
+header {
+    background: rgba(244, 244, 244, 0.85);
+    padding: 1.5rem;
+    text-align: center;
+    transition: background 0.3s, color 0.3s; /* Transition added for smooth theme switching */
+}
+
+header h1 {
+    margin: 0;
+    color: #222;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(51, 51, 51, 0.9);
+    padding: 0.8rem;
+    color: #fff;
+    transition: background-color 0.3s ease; /* Added for dark mode transitions */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 0.8rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff9800;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle label {
+    margin-left: 0.5rem;
+    color: #fff;
+}
+
+/* About Section */
+.about-content {
+    max-width: 600px; /* Reduced max-width for a more compact design */
+    margin: 1rem auto; /* Reduced margin for a more compact look */
+    background: rgba(255, 255, 255, 0.85);
+    padding: 1rem; /* Reduced padding */
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-text {
+    text-align: center;
+    color: #222;
+}
+
+.about-text h2 {
+    margin-bottom: 0.5rem;
+}
+
+.about-text p {
+    margin-bottom: 0.5rem; /* Reduced margin for compact text */
+    line-height: 1.4;
+    font-size: 0.9rem; /* Slightly smaller font */
+}
+
+/* Updated Images Section */
+.about-images {
+    display: flex;
+    justify-content: center; /* Center images horizontally */
+    gap: 0.5rem; /* Reduced gap between images */
+    margin-top: 1rem; /* Reduced margin for a more compact layout */
+    width: 100%;
+}
+
+.about-img {
+    width: 45%; /* Decreased width for smaller images */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.05);
+}
+
+/* Quotes Section */
+.about-quotes {
+    margin-top: 1rem; /* Reduced margin for more compact layout */
+    font-style: italic;
+    font-size: 1rem; /* Slightly smaller font size */
+    color: #555;
+    text-align: center;
+}
+
+.about-quotes blockquote {
+    margin-bottom: 0.5rem; /* Reduced margin for more compact layout */
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background: rgba(51, 51, 51, 0.9);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer .social-links a {
+    color: #fff;
+    margin: 0 0.5rem;
+    font-size: 1.3rem; /* Slightly reduced icon size */
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #ff9800;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode nav, .dark-mode footer {
+    background: #1e1e1e;
+}
+
+.dark-mode nav ul li a {
+    color: #e0e0e0;
+}
+
+.dark-mode nav ul li a:hover {
+    color: #ff9800;
+}
+
+.dark-mode header {
+    background: rgba(30, 30, 30, 0.85); /* Dark mode background for the header */
+    color: #e0e0e0;
+}
+
+.dark-mode header h1 {
+    color: #e0e0e0; /* Dark mode color for the header text */
+}
+
+.dark-mode .about-content {
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.dark-mode .about-quotes blockquote {
+    color: #ccc;
+}
+
+.dark-mode .about-text {
+    color: #e0e0e0;
+}

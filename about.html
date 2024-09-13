@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey Through Lens - About</title>
+    <link rel="stylesheet" href="./about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./login.html">Home</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="theme-toggle">
+            <input type="checkbox" id="toggle-dark-mode">
+            <label for="toggle-dark-mode">Dark Mode</label>
+        </div>
+    </nav>
+
+    <header>
+        <h1>About Us</h1>
+    </header>
+
+    <section class="about-content">
+        <div class="about-text">
+            <h2>Our Journey Through Lens</h2>
+            <p>
+                Welcome to Journey Through Lens, where every photograph is a captured moment of life’s beauty and emotion. From breathtaking landscapes to intimate portraits, we believe in the power of imagery to tell stories that words cannot.
+            </p>
+            <p>
+                Our passion for photography is rooted in our love for art, culture, and the natural world. Each photo taken is a testimony to the uniqueness of every moment. We strive to inspire creativity and embrace the beauty in simplicity.
+            </p>
+        </div>
+        
+        <!-- Images Section -->
+        <div class="about-images">
+            <img src="./Images/IMG_0088.jpg" alt="Photography Showcase" class="about-img">
+            <img src="./Images/IMG_0004.jpg" alt="Creative Photography" class="about-img">
+        </div>
+
+        <!-- Photography Quotes -->
+        <div class="about-quotes">
+            <blockquote>"Photography is the story I fail to put into words." – Destin Sparks</blockquote>
+            <blockquote>"You don’t take a photograph, you make it." – Ansel Adams</blockquote>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Journey Through Lens. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="mailto:example@example.com"><i class="fa fa-envelope"></i></a>
+            <a href="https://www.instagram.com/journey._.throughlenses" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        const toggleSwitch = document.getElementById('toggle-dark-mode');
+        const body = document.body;
+        const header = document.querySelector('header');
+
+        // Check if dark mode preference exists in local storage
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            body.classList.add(currentTheme);
+            if (currentTheme === 'dark-mode') {
+                toggleSwitch.checked = true;
+            }
+        }
+
+        // Toggle between dark and light mode
+        toggleSwitch.addEventListener('change', () => {
+            if (toggleSwitch.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light-mode');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey Through Lens - Contact</title>
+    <link rel="stylesheet" href="./contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./login.html">Home</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./about.html">About</a></li>
+            
+        </ul>
+        <div class="theme-toggle">
+            <input type="checkbox" id="toggle-dark-mode">
+            <label for="toggle-dark-mode">Dark Mode</label>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <section class="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <div class="contact-box">
+                    <div class="contact-detail">
+                        <p><strong>Email:</strong> shreya31.rout1999@gmail.com</p>
+                        <p><strong>Phone:</strong> +917381460534</p>
+                    </div>
+                    <div class="contact-detail">
+                        <p><strong>Email:</strong> jyotinayak961@gmail.com</p>
+                        <p><strong>Phone:</strong> +919938244666</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Feedback</h2>
+                <div class="form-box">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="628263ba-14ac-44d2-bb0a-d59d48ab3c5c">
+                        
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="feedback">Feedback:</label>
+                            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+                        </div>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <blockquote>
+                <p>"A photograph is the pause button of life." – Anonymous</p>
+            </blockquote>
+        </div>
+    </section>
+
+    <footer>
+        <div id="auth-links">
+            <!-- Login/Logout and Sign Up will be injected here by JavaScript -->
+        </div>
+        <p>&copy; 2024 Journey Through Lens. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="mailto:shreya31.rout1999@gmail.com"><i class="fa fa-envelope"></i></a>
+            <a href="https://www.instagram.com/journey._.throughlenses?igsh=ejlwejNuMzI3Yjg%3D&utm_source=qr" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-f"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        const toggleSwitch = document.getElementById('toggle-dark-mode');
+        const body = document.body;
+
+        // Check if dark mode preference exists in local storage
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            body.classList.add(currentTheme);
+            if (currentTheme === 'dark-mode') {
+                toggleSwitch.checked = true;
+            }
+        }
+
+        // Toggle between dark and light mode
+        toggleSwitch.addEventListener('change', () => {
+            if (toggleSwitch.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light-mode');
+            }
+            adjustTextColor();
+        });
+
+        // Handle login/signup visibility
+        const isLoggedIn = false; // Replace with actual login state check
+        const authLinks = document.getElementById('auth-links');
+        
+        if (isLoggedIn) {
+            authLinks.innerHTML = '<p><a href="./logout.html">Logout</a></p>';
+        } else {
+            authLinks.innerHTML = '<p><a href="./login.html">Login</a> | <a href="./signup.html">Sign Up</a></p>';
+        }
+
+        // Adjust text color based on theme
+        function adjustTextColor() {
+            const isDarkMode = body.classList.contains('dark-mode');
+            document.querySelectorAll('blockquote p').forEach(p => {
+                p.style.color = isDarkMode ? '#e0e0e0' : '#333';
+            });
+            document.querySelectorAll('form label').forEach(label => {
+                label.style.color = isDarkMode ? '#e0e0e0' : '#333';
+            });
+            document.querySelectorAll('.contact-box p').forEach(p => {
+                p.style.color = isDarkMode ? '#e0e0e0' : '#333';
+            });
+        }
+
+        // Initial adjustment
+        adjustTextColor();
+    </script>
+</body>
+</html>

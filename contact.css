@@ -1,0 +1,273 @@
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+    background-image: url('./Images/sky.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333; /* Default dark text for light mode */
+}
+
+nav {
+    background: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle label {
+    margin-left: 0.5rem;
+}
+
+header {
+    background: rgba(244, 244, 244, 0.8);
+    padding: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #121212;
+}
+
+section.contact {
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    margin-bottom: 2rem;
+    text-align: left; /* Align text left for better readability */
+}
+
+.contact-info h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #000; /* Default light mode color */
+}
+
+.contact-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between; /* Space out the two blocks */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Adjusted to ensure it scales properly */
+    margin: 0 auto;
+}
+
+.contact-detail {
+    flex: 1;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start for a clean look */
+}
+
+.contact-box p {
+    margin: 0.5rem 0;
+    color: #333; /* Default color for light mode */
+    font-size: 1rem; /* Improve font size for better readability */
+}
+
+.contact-box p strong {
+    color: #000;
+}
+
+.contact-form {
+    margin-bottom: 2rem;
+    text-align: center; /* Center the form content */
+}
+
+.contact-form h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #000; /* Light mode text color */
+}
+
+.form-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Adjust max-width for better alignment */
+    margin: 0 auto; /* Center the form box */
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left; /* Align label and input text to the left */
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #333; /* Visible in light mode */
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem; /* Reduced padding for a more compact look */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    color: #000;
+}
+
+form input {
+    max-width: 400px; /* Make the input box smaller */
+}
+
+form textarea {
+    max-width: 400px; /* Make the textarea box smaller */
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+form input:focus, form textarea:focus {
+    border-color: #feb47b;
+    box-shadow: 0 0 5px rgba(254, 180, 123, 0.5);
+}
+
+form button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+blockquote {
+    margin: 2rem 0;
+    background: none; /* Default color for light mode */
+    font-style: italic;
+    font-size: 1.3rem;
+    text-align: center;
+    padding-top: 25px;
+}
+
+footer {
+    background: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer .social-links a {
+    color: #fff;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+footer .social-links a:hover {
+    color: #ddd;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0; /* Light text for dark mode */
+}
+
+.dark-mode nav, .dark-mode footer {
+    background: #1e1e1e;
+}
+
+.dark-mode header {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode section.contact {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .contact-box {
+    background: #333;
+    border: 1px solid #444;
+}
+
+.dark-mode .contact-box p {
+    color: #e0e0e0; /* Light text for dark mode */
+}
+
+.dark-mode .contact-info h2 {
+    color: #e0e0e0;
+}
+
+.dark-mode .contact-form h2 {
+    color: #e0e0e0;
+}
+
+.dark-mode .contact-box p strong {
+    color: #fff;
+}
+
+.dark-mode .contact-info, .dark-mode .contact-form {
+    color: #e0e0e0;
+}
+
+.dark-mode .form-box {
+    background: #333;
+    border: 1px solid #444;
+}
+
+.dark-mode form input, .dark-mode form textarea {
+    background: #444;
+    color: #fff;
+    border-color: #555;
+}
+
+.dark-mode form label {
+    color: #e0e0e0;
+}
+
+.dark-mode form button {
+    background-color: #555;
+}
+
+.dark-mode form button:hover {
+    background-color: #777;
+}

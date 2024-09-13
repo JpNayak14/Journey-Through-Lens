@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey Through Lens- Home</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./login.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="theme-toggle">
+            <input type="checkbox" id="toggle-dark-mode">
+            <label for="toggle-dark-mode">Dark Mode</label>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Welcome to Journey Through Lenses</h1>
+    </header>
+
+    <section class="main">
+        <h2>Sign In</h2>
+        <form class="signin-form">
+            <label for="signin-username">Username:</label>
+            <input type="text" id="signin-username" name="username" required><br>
+            <label for="signin-password">Password:</label>
+            <input type="password" id="signin-password" name="password" required><br>
+            <button type="submit">Sign In</button>
+        </form>
+        <p>Already a customer? <a href="./login.html">Login here</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Photography Showcase. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="mailto:example@example.com"><i class="fa fa-envelope"></i></a>
+            <a href="https://www.instagram.com/journey._.throughlenses?igsh=ejlwejNuMzI3Yjg%3D&utm_source=qr" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        const toggleSwitch = document.getElementById('toggle-dark-mode');
+        const body = document.body;
+
+        // Check if dark mode preference exists in local storage
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            body.classList.add(currentTheme);
+            if (currentTheme === 'dark-mode') {
+                toggleSwitch.checked = true;
+            }
+        }
+
+        // Toggle between dark and light mode
+        toggleSwitch.addEventListener('change', () => {
+            if (toggleSwitch.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light-mode');
+            }
+        });
+    </script>
+</body>
+</html>
